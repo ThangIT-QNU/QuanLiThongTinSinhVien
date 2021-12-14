@@ -1,0 +1,105 @@
+﻿<Window x:Class="Ungdungcuoiki.frDangNhap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ungdungcuoiki"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="frDangNhap" Height="450" Width="850" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image  Source="/anh/qnu.png" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Label VerticalAlignment="Center"
+                       HorizontalAlignment="Center" 
+                       Content="ĐĂNG NHẬP"
+                       FontWeight="Bold" FontSize="20"/>
+            </Grid>
+            <Grid Grid.Row="2"  >
+                <Label  HorizontalAlignment="Center" Margin="0 -10 0 0"
+                        Content="Tài Khoản" FontSize="16"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <TextBox Name="txtTaiKhoan" 
+                         FontSize="16" Margin="0 -35 0 0"
+                         Width="165" Height="30"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Label HorizontalAlignment="Center" 
+                       Content="Mật Khẩu"  Margin="0 -15 0 0"
+                       FontSize="16"/>
+            </Grid>
+            <Grid Grid.Row="5">
+                <TextBox 
+                    Name="txtMatKhau" Margin="0 -45 0 0"
+                    FontSize="16"  
+                    Width="165" Height="30">
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="98*"/>
+                    <ColumnDefinition Width="151*"/>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Name="btnDangNhap" VerticalAlignment="Top"
+                    FontWeight="Bold" 
+                    FontSize="14" HorizontalAlignment="Left" Width="105" 
+                    Height="30" Content="Đăng Nhập" Margin="15,-10,0,15"
+                    Background="#0000FF" Click="btnDangNhap_Click" Grid.ColumnSpan="2"/>
+                <Button 
+                    Name="btnThoat" Background="Indigo"
+                    FontWeight="Bold" FontSize="14" VerticalAlignment="Top"
+                    Width="105" Height="30" Margin="0,-10,15,15"
+                    Content="Thoát"  HorizontalAlignment="Right" Grid.Column="1" Click="btnThoat_Click"/>
+                <TextBlock Height="30" FontSize="9" Width="150" Margin=" 7 20 0 0">           
+                    <Hyperlink Click="DangKi">
+                        Đăng ký tài khoản mới!
+                    </Hyperlink>
+                </TextBlock>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="300"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Height="85">
+                <Label  
+                    HorizontalAlignment="Center" 
+                    Content="WELCOME TO" Margin="0 -20 0 0"
+                    VerticalAlignment="Top" Height="40"
+                    FontWeight="Bold" FontSize="22">
+                </Label>
+                <Label 
+                    HorizontalAlignment="Center" 
+                    Margin=" 0 10 0 0" VerticalAlignment="Top"
+                    Content="TRƯỜNG ĐẠI HỌC QUY NHƠN"
+                    Height="55" 
+                    FontWeight="Bold" 
+                    FontSize="35">
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="/anh/qnu1.png" Height="auto" Margin="0 -30 0 0"
+                Stretch="Fill" Width="600" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
